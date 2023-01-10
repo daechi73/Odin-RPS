@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="uts-8" />
-    <script src="index.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="index.css" />
     <title>Rock/Paper/Scissors</title>
   </head>
@@ -16,9 +16,22 @@
       <div class="display-pc"></div>
     </div>
     <div class="container-choices">
-      <input type="image" class="choice-rock" alt="rock" />
-      <input type="image" class="choice-paper" alt="paper" />
-      <input type="image" class="choice-scissors" alt="scissors" />
+      <img id="rock" src="#" name="rock" alt="rock" onClick="rockChosen()" />
+      <img
+        id="paper"
+        src="#"
+        name="paper"
+        alt="paper"
+        onClick="paperChosen()"
+      />
+      <img
+        id="scissors"
+        src="#"
+        name="scissors"
+        alt="scissors"
+        onClick="scissorsChosen()"
+      />
+      <button type="button" onClick="getComputerChoice()">Play</button>
     </div>
     <div class="container-score">
       <div class="score">score:</div>

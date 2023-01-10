@@ -20,12 +20,12 @@ Html Layout:
 
 TItle: shows title
 
-Display chosen: shows user input and computer input
+Display area: shows user input, computer input and score
 
 Selection section: Displays options for the users to click on, once clicked 
  it will highlight the chosen card and a button to proceed with the choice.
 
-score section: shows the score 
+
 
 pop up dialog box: pops up once the game is done (5 round) and asks user if 
  they want to play again.
