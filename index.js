@@ -3,6 +3,7 @@ let computerScore = 0;
 let systemMsg = "";
 let scoreMsg = "";
 let userChoice = "";
+let pcChoice = "";
 // document.getElementById("rock").addEventListener("click", () => {
 //   userChoice = "rock";
 //   console.log(userChoice);
@@ -54,19 +55,19 @@ function play() {
   if (userChoice.length == 0) {
     document.getElementById("status").innerHTML = "Please select your choice";
   } else {
-    getComputerChoice();
+    pcChoice = getComputerChoice();
     if (
-      (userChoice == "rock" && getComputerChoice() == "scissors") ||
-      (userChoice == "scissors" && getComputerChoice() == "paper") ||
-      (userChoice == "paper" && getComputerChoice() == "rock")
+      (userChoice == "rock" && pcChoice == "scissors") ||
+      (userChoice == "scissors" && pcChoice == "paper") ||
+      (userChoice == "paper" && pcChoice == "rock")
     ) {
       systemMsg = "Player Wins!";
       playerScore++;
       scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
     } else if (
-      (userChoice == "rock" && getComputerChoice == "paper") ||
-      (userChoice == "paper" && getComputerChoice() == "scissors") ||
-      (userChoice == "scissors" && getComputerChoice() == "rock")
+      (userChoice == "rock" && pcChoice == "paper") ||
+      (userChoice == "paper" && pcChoice == "scissors") ||
+      (userChoice == "scissors" && pcChoice == "rock")
     ) {
       computerScore++;
       systemMsg = "Computer Wins!";
@@ -75,12 +76,14 @@ function play() {
       systemMsg = "its a tie!";
       scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
     }
+    console.log("USer: " + userChoice);
+    console.log("pc: " + pcChoice);
     document.getElementById("status").innerHTML = systemMsg;
     document.getElementById("score").innerHTML = scoreMsg;
 
-    if (playerScore == 2 || computerScore == 2) {
+    if (playerScore == 5 || computerScore == 5) {
       let winner = "";
-      if (playerScore == 2) {
+      if (playerScore == 5) {
         winner = "Player";
       } else {
         winner = "Computer";
@@ -88,10 +91,11 @@ function play() {
 
       if (
         confirm(
-          `Player Score: ${playerScore} Computer Score:${computerScore}
-${winner} Wins! 
+          `Final Score:
+                           Player: ${playerScore} Computer Score:${computerScore}
+                                        ${winner} Wins! 
 
-Play again?`
+                                        Play again?`
         )
       ) {
         playerScore = 0;

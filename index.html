@@ -22,22 +22,35 @@
         <div id="status"></div>
       </div>
       <div class="container-choices">
-        <img id="rock" src="#" name="rock" alt="rock" onClick="rockChosen()" />
-        <img
-          id="paper"
-          src="#"
-          name="paper"
-          alt="paper"
-          onClick="paperChosen()"
-        />
-        <img
-          id="scissors"
-          src="#"
-          name="scissors"
-          alt="scissors"
-          onClick="scissorsChosen()"
-        />
-        <button type="button" onClick="play()">Play</button>
+        <div class="container-images">
+          <img
+            id="rock"
+            class="images"
+            src="/img/rock.jpg"
+            name="rock"
+            alt="rock"
+            onClick="rockChosen()"
+          />
+          <img
+            id="paper"
+            class="images"
+            src="/img/paper.jpg"
+            name="paper"
+            alt="paper"
+            onClick="paperChosen()"
+          />
+          <img
+            id="scissors"
+            class="images"
+            src="/img/scissors.jpg"
+            name="scissors"
+            alt="scissors"
+            onClick="scissorsChosen()"
+          />
+        </div>
+        <div class="button">
+          <button type="button" onClick="play()">Play</button>
+        </div>
       </div>
     </div>
     <div id="end-game" class="end-game"></div>

@@ -1,1 +1,38 @@
-
+body {
+  text-align: center;
+  background-color: black;
+  color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.container-display {
+  display: flex;
+  justify-content: space-evenly;
+  flex-basis: auto;
+}
+.container-images {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container-choices {
+  height: 250px;
+  margin: 20px;
+}
+.images {
+  width: 200px;
+  height: 220px;
+  border: solid;
+  border-color: antiquewhite;
+  border-radius: 8px;
+}
+button {
+  margin: 20px;
+  border: solid;
+  border-color: antiquewhite;
+}
+.end-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
