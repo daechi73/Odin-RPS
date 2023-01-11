@@ -7,34 +7,38 @@
     <title>Rock/Paper/Scissors</title>
   </head>
   <body>
-    <div class="title">
-      <h1>Rock paper Scissors</h1>
+    <div id="main-container" class="main-container">
+      <div class="title">
+        <h1>Rock paper Scissors</h1>
+      </div>
+      <div>Selected choice</div>
+      <div class="container-display">
+        <div id="user-display">User Selects:</div>
+        <div id="pc-display">Computer Selects: ?</div>
+      </div>
+      <div class="system-message">
+        <div id="score">score:</div>
+        <div id="status"></div>
+      </div>
+      <div class="container-choices">
+        <img id="rock" src="#" name="rock" alt="rock" onClick="rockChosen()" />
+        <img
+          id="paper"
+          src="#"
+          name="paper"
+          alt="paper"
+          onClick="paperChosen()"
+        />
+        <img
+          id="scissors"
+          src="#"
+          name="scissors"
+          alt="scissors"
+          onClick="scissorsChosen()"
+        />
+        <button type="button" onClick="play()">Play</button>
+      </div>
     </div>
-    <div>Selected choice</div>
-    <div class="container-display">
-      <div class="display-user"></div>
-      <div class="display-pc"></div>
-    </div>
-    <div class="container-choices">
-      <img id="rock" src="#" name="rock" alt="rock" onClick="rockChosen()" />
-      <img
-        id="paper"
-        src="#"
-        name="paper"
-        alt="paper"
-        onClick="paperChosen()"
-      />
-      <img
-        id="scissors"
-        src="#"
-        name="scissors"
-        alt="scissors"
-        onClick="scissorsChosen()"
-      />
-      <button type="button" onClick="getComputerChoice()">Play</button>
-    </div>
-    <div class="container-score">
-      <div class="score">score:</div>
-    </div>
+    <div id="end-game" class="end-game"></div>
   </body>
 </html>
