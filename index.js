@@ -78,19 +78,26 @@ function play() {
     document.getElementById("status").innerHTML = systemMsg;
     document.getElementById("score").innerHTML = scoreMsg;
 
-    if (playerScore == 5 || computerScore == 5) {
+    if (playerScore == 2 || computerScore == 2) {
       let winner = "";
-      if (playerScore == 5) {
+      if (playerScore == 2) {
         winner = "Player";
       } else {
         winner = "Computer";
       }
-      confirm(`${winner} Wins! 
-      Play again?`);
-      if (confirm == true) {
+
+      if (
+        confirm(
+          `Player Score: ${playerScore} Computer Score:${computerScore}
+${winner} Wins! 
+
+Play again?`
+        )
+      ) {
         playerScore = 0;
         computerScore = 0;
         systemMsg = "Lets go again !";
+        scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
         document.getElementById("status").innerHTML = systemMsg;
         document.getElementById("score").innerHTML = scoreMsg;
       } else {
