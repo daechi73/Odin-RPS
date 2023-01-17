@@ -17,6 +17,11 @@ let pcChoice = "";
 //     userChoice = "scissors";
 //   });
 
+document.querySelector("button").addEventListener("click", play);
+document.getElementById("rock").addEventListener("click", rockChosen);
+document.getElementById("paper").addEventListener("click", paperChosen);
+document.getElementById("scissors").addEventListener("click", scissorsChosen);
+
 function getComputerChoice() {
   let chosenValue = "";
   const chosen = Math.floor(Math.random() * 4);

@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="uts-8" />
-    <script type="text/javascript" src="index.js"></script>
-    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" defer />
     <title>Rock/Paper/Scissors</title>
   </head>
   <body>
@@ -29,7 +29,6 @@
             src="/img/rock.jpg"
             name="rock"
             alt="rock"
-            onClick="rockChosen()"
           />
           <img
             id="paper"
@@ -37,7 +36,6 @@
             src="/img/paper.jpg"
             name="paper"
             alt="paper"
-            onClick="paperChosen()"
           />
           <img
             id="scissors"
@@ -45,11 +43,10 @@
             src="/img/scissors.jpg"
             name="scissors"
             alt="scissors"
-            onClick="scissorsChosen()"
           />
         </div>
         <div class="button">
-          <button type="button" onClick="play()">Play</button>
+          <button type="button">Play</button>
         </div>
       </div>
     </div>
