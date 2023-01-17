@@ -61,25 +61,39 @@ function play() {
     document.getElementById("status").innerHTML = "Please select your choice";
   } else {
     pcChoice = getComputerChoice();
-    if (
-      (userChoice == "rock" && pcChoice == "scissors") ||
-      (userChoice == "scissors" && pcChoice == "paper") ||
-      (userChoice == "paper" && pcChoice == "rock")
-    ) {
-      systemMsg = "Player Wins!";
-      playerScore++;
-      scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
-    } else if (
-      (userChoice == "rock" && pcChoice == "paper") ||
-      (userChoice == "paper" && pcChoice == "scissors") ||
-      (userChoice == "scissors" && pcChoice == "rock")
-    ) {
-      computerScore++;
-      systemMsg = "Computer Wins!";
-      scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
-    } else {
+    if (userChoice === pcChoice) {
       systemMsg = "its a tie!";
       scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
+    } else if (userChoice === "rock") {
+      if (pcChoice === "paper") {
+        systemMsg = "Player Wins!";
+        playerScore++;
+        scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
+      } else {
+        computerScore++;
+        systemMsg = "Computer Wins!";
+        scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
+      }
+    } else if (userChoice === "paper") {
+      if (pcChoice === "rock") {
+        systemMsg = "Player Wins!";
+        playerScore++;
+        scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
+      } else {
+        computerScore++;
+        systemMsg = "Computer Wins!";
+        scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
+      }
+    } else if (userChoice === "scissors") {
+      if (pcChoice === "rock") {
+        computerScore++;
+        systemMsg = "Computer Wins!";
+        scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
+      } else {
+        systemMsg = "Player Wins!";
+        playerScore++;
+        scoreMsg = `Score: Player:${playerScore}   Computer:${computerScore}`;
+      }
     }
     console.log("USer: " + userChoice);
     console.log("pc: " + pcChoice);
